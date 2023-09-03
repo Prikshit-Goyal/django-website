@@ -1,0 +1,21 @@
+{% extends 'header.html' %}
+
+{% block title %}
+  Text Result
+{% endblock %}
+
+{% block body %}
+  {% comment %} <h1>Home</h1>
+
+  <h3>Variable Passed = {{ variable }}</h3> {% endcomment %}
+  <h1 class="mt-5 mb-5 text-center"> {{purpose}} Analyzed text</h1>
+
+  
+  <div class="container m-5">
+    <h5>Total Characters - {{count}}</h5>
+    <textarea name="textbox" id="textbox" style="width: 100%; height: 250px;">
+        {{analyzed_text}}
+    </textarea>
+
+  </div>
+{% endblock %}

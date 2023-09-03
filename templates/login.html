@@ -1,0 +1,43 @@
+    
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/css/login.css">
+  <div id="particles-js"></div>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    
+
+    <div class="container">
+        <div id="login-box" style="padding-bottom: 0px;">
+            <div class="logo">
+                <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+            </div>
+            
+            <form action="/loginuser" method="POST">
+            <div class="controls">
+                {% csrf_token %}
+
+                <input id="input11" type="text" name="username" placeholder="Username" class="form-control" autocomplete="off"/><br>
+                <input id="input11" type="password" name="password" placeholder="Password" class="form-control" /><br>
+                {% if messages %}
+                {% for message in messages %}
+                    <span style="color: red; ">{{ message }}</span>
+                {% endfor %}
+            {% endif %}
+                <button id="button11" type="submit" name="login"  class="btn btn-default btn-block btn-custom">Login</button>
+            
+            </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src='https://code.jquery.com/jquery-1.11.1.min.js'></script>
+<script  src="/static/js/script.js"></script>
+</html>
+
