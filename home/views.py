@@ -102,7 +102,7 @@ def loginuser(request):
 ## TEXTUTILS  #################################################################################   
 def textutils(request):
     arr = {
-        'variable': "Home"
+        'variable': "Home" 
     }
     return render(request,'textutils/home.html',arr)
 
